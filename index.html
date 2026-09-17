@@ -1,1 +1,1319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ENYELL | FLOW MONTANA</title>
+
+<meta name="description" content="ENYELL — Flow Montana. Música, videos y Flow en Llamas.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:72px;
+z-index:1000;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 6%;
+
+background:rgba(0,0,0,.72);
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:27px;
+font-weight:900;
+letter-spacing:5px;
+}
+
+.logo span{
+color:#d6a84f;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+nav a:hover{
+color:#d6a84f;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+min-height:100vh;
+
+position:relative;
+
+display:flex;
+align-items:center;
+
+padding:100px 8% 70px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.96) 0%,
+rgba(0,0,0,.78) 38%,
+rgba(0,0,0,.25) 72%,
+rgba(0,0,0,.75) 100%
+),
+
+url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=2000&q=85");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero:after{
+
+content:"";
+
+position:absolute;
+
+right:0;
+top:0;
+
+width:58%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(0,0,0,.05)
+);
+
+pointer-events:none;
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:750px;
+}
+
+.kicker{
+
+color:#d6a84f;
+
+font-size:13px;
+
+letter-spacing:5px;
+
+font-weight:bold;
+
+margin-bottom:22px;
+}
+
+.hero h1{
+
+font-size:clamp(70px,14vw,170px);
+
+line-height:.78;
+
+font-weight:1000;
+
+letter-spacing:-7px;
+}
+
+.hero h1 span{
+color:#d6a84f;
+}
+
+.hero h2{
+
+margin-top:32px;
+
+font-size:clamp(25px,5vw,58px);
+
+letter-spacing:5px;
+
+font-weight:900;
+}
+
+.hero-text{
+
+margin-top:22px;
+
+max-width:550px;
+
+color:#bbb;
+
+font-size:16px;
+
+line-height:1.7;
+}
+
+.buttons{
+
+display:flex;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+margin-top:35px;
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 26px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-size:12px;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+transition:.3s;
+}
+
+.btn-gold{
+
+background:#d6a84f;
+
+color:#000;
+}
+
+.btn-gold:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 30px rgba(214,168,79,.3);
+}
+
+.btn-outline{
+
+border:1px solid #555;
+
+color:#fff;
+}
+
+.btn-outline:hover{
+
+border-color:#d6a84f;
+
+color:#d6a84f;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+padding:100px 8%;
+}
+
+.section-label{
+
+color:#d6a84f;
+
+font-size:12px;
+
+letter-spacing:4px;
+
+font-weight:bold;
+}
+
+.section-title{
+
+font-size:clamp(40px,7vw,70px);
+
+margin-top:10px;
+
+letter-spacing:-3px;
+}
+
+.section-subtitle{
+
+color:#888;
+
+max-width:600px;
+
+line-height:1.7;
+
+margin-top:18px;
+}
+
+/* =========================
+   FLOWS
+========================= */
+
+.flows{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+margin-top:55px;
+}
+
+.flow{
+
+min-height:350px;
+
+padding:40px;
+
+border-radius:22px;
+
+border:1px solid #222;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+transition:.4s;
+}
+
+.flow:hover{
+
+transform:translateY(-8px);
+
+border-color:#d6a84f;
+}
+
+.flow-number{
+
+color:#666;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+margin-bottom:auto;
+}
+
+.flow h3{
+
+font-size:43px;
+
+margin-bottom:15px;
+}
+
+.flow p{
+
+color:#aaa;
+
+line-height:1.7;
+}
+
+.montana{
+
+background:
+linear-gradient(
+135deg,
+rgba(214,168,79,.15),
+#080808
+);
+}
+
+.montana h3{
+color:#d6a84f;
+}
+
+.llamas{
+
+background:
+linear-gradient(
+135deg,
+rgba(255,75,20,.18),
+#080808
+);
+}
+
+.llamas h3{
+color:#ff642d;
+}
+
+/* =========================
+   LANZAMIENTO
+========================= */
+
+.release{
+
+background:#090909;
+}
+
+.release-box{
+
+margin-top:50px;
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+gap:35px;
+
+align-items:stretch;
+}
+
+.video{
+
+min-height:390px;
+
+border-radius:20px;
+
+border:1px solid #222;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.3),
+rgba(0,0,0,.8)
+),
+
+url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=85");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+}
+
+.play{
+
+width:78px;
+
+height:78px;
+
+border-radius:50%;
+
+background:#d6a84f;
+
+color:#000;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:24px;
+
+text-decoration:none;
+}
+
+.release-info{
+
+padding:35px;
+
+border:1px solid #222;
+
+border-radius:20px;
+
+background:#0d0d0d;
+}
+
+.release-info small{
+
+color:#d6a84f;
+
+letter-spacing:3px;
+
+font-weight:bold;
+}
+
+.release-info h3{
+
+font-size:45px;
+
+margin:18px 0;
+}
+
+.release-info p{
+
+color:#999;
+
+line-height:1.7;
+
+margin-bottom:25px;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-list{
+
+margin-top:45px;
+
+display:grid;
+
+gap:12px;
+}
+
+.track{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+padding:20px;
+
+border:1px solid #222;
+
+border-radius:14px;
+
+background:#080808;
+
+transition:.3s;
+}
+
+.track:hover{
+
+border-color:#d6a84f;
+
+transform:translateX(5px);
+}
+
+.track-number{
+
+color:#555;
+
+width:30px;
+}
+
+.track-info{
+
+flex:1;
+}
+
+.track-info h3{
+
+font-size:17px;
+}
+
+.track-info p{
+
+color:#666;
+
+font-size:12px;
+
+margin-top:5px;
+}
+
+.track-button{
+
+width:43px;
+
+height:43px;
+
+border-radius:50%;
+
+background:#d6a84f;
+
+color:#000;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-decoration:none;
+
+font-weight:bold;
+}
+
+/* =========================
+   ARTISTA
+========================= */
+
+.artist{
+
+display:grid;
+
+grid-template-columns:.9fr 1.1fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.artist-photo{
+
+height:520px;
+
+border-radius:22px;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.05),
+rgba(0,0,0,.4)
+),
+
+url("https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1000&q=85");
+
+background-size:cover;
+
+background-position:center;
+
+border:1px solid #222;
+}
+
+.artist-text p{
+
+color:#aaa;
+
+line-height:1.9;
+
+margin-top:20px;
+}
+
+.quote{
+
+font-size:36px;
+
+font-weight:bold;
+
+line-height:1.2;
+
+margin-top:35px;
+}
+
+.quote span{
+
+color:#d6a84f;
+}
+
+/* =========================
+   VIDEOS
+========================= */
+
+.video-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+margin-top:45px;
+}
+
+.video-card{
+
+height:270px;
+
+border-radius:18px;
+
+border:1px solid #222;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#101010;
+}
+
+.video-card .play{
+
+width:65px;
+
+height:65px;
+}
+
+/* =========================
+   REDES
+========================= */
+
+.social{
+
+text-align:center;
+
+background:#090909;
+}
+
+.social-links{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+margin-top:35px;
+}
+
+.social-links a{
+
+padding:14px 24px;
+
+border:1px solid #333;
+
+border-radius:30px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:13px;
+}
+
+.social-links a:hover{
+
+border-color:#d6a84f;
+
+color:#d6a84f;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+padding:35px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+color:#555;
+
+font-size:11px;
+
+border-top:1px solid #181818;
+}
+
+footer strong{
+
+color:#aaa;
+
+letter-spacing:4px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+header{
+
+height:65px;
+
+padding:0 5%;
+}
+
+.logo{
+font-size:23px;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+
+padding:110px 6% 70px;
+
+min-height:100svh;
+
+background-position:65% center;
+}
+
+.hero h1{
+
+font-size:82px;
+
+letter-spacing:-5px;
+}
+
+.hero h2{
+
+font-size:28px;
+
+letter-spacing:3px;
+}
+
+.hero-text{
+
+font-size:14px;
+}
+
+section{
+
+padding:75px 6%;
+}
+
+.flows{
+
+grid-template-columns:1fr;
+}
+
+.flow{
+
+min-height:290px;
+
+padding:30px;
+}
+
+.release-box{
+
+grid-template-columns:1fr;
+}
+
+.video{
+
+min-height:300px;
+}
+
+.release-info h3{
+
+font-size:35px;
+}
+
+.artist{
+
+grid-template-columns:1fr;
+
+gap:35px;
+}
+
+.artist-photo{
+
+height:430px;
+}
+
+.video-grid{
+
+grid-template-columns:1fr;
+}
+
+footer{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     MENU
+========================= -->
+
+<header>
+
+<div class="logo">
+ENY<span>ELL</span>
+</div>
+
+<nav>
+
+<a href="#inicio">INICIO</a>
+
+<a href="#flows">FLOWS</a>
+
+<a href="#lanzamiento">LANZAMIENTO</a>
+
+<a href="#musica">MÚSICA</a>
+
+<a href="#artista">ENYELL</a>
+
+<a href="#videos">VIDEOS</a>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="kicker">
+ARTISTA · MÚSICA · ACTITUD
+</div>
+
+<h1>
+ENY<span>ELL</span>
+</h1>
+
+<h2>
+FLOW MONTANA
+</h2>
+
+<p class="hero-text">
+Dos mundos. Un solo artista.
+El sonido de la calle, la actitud,
+el romance y las emociones.
+</p>
+
+<div class="buttons">
+
+<a href="#musica" class="btn btn-gold">
+ESCUCHAR MÚSICA
+</a>
+
+<a href="#lanzamiento" class="btn btn-outline">
+VER LANZAMIENTO
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FLOWS
+========================= -->
+
+<section id="flows">
+
+<div class="section-label">
+LA IDENTIDAD
+</div>
+
+<h2 class="section-title">
+DOS FLOWS.
+</h2>
+
+<p class="section-subtitle">
+ENYELL tiene dos caras musicales.
+Dos formas de sentir el ritmo.
+</p>
+
+
+<div class="flows">
+
+<div class="flow montana">
+
+<div class="flow-number">
+01 / FLOW MONTANA
+</div>
+
+<h3>
+FLOW MONTANA
+</h3>
+
+<p>
+Calle, actitud, dinero, presencia
+y ese sonido que llega con peso.
+</p>
+
+</div>
+
+
+<div class="flow llamas">
+
+<div class="flow-number">
+02 / FLOW EN LLAMAS
+</div>
+
+<h3>
+🔥 FLOW EN LLAMAS
+</h3>
+
+<p>
+Romance, deseo, emociones y
+reggaetón para convertir historias
+en canciones.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LANZAMIENTO
+========================= -->
+
+<section class="release" id="lanzamiento">
+
+<div class="section-label">
+NUEVO LANZAMIENTO
+</div>
+
+<h2 class="section-title">
+EL PRÓXIMO HIT.
+</h2>
+
+
+<div class="release-box">
+
+<div class="video">
+
+<a href="#" class="play">
+▶
+</a>
+
+</div>
+
+
+<div class="release-info">
+
+<small>
+ENYELL · FLOW EN LLAMAS
+</small>
+
+<h3>
+PRÓXIMAMENTE
+</h3>
+
+<p>
+Aquí aparecerá el lanzamiento
+más reciente de ENYELL.
+
+Cuando tengamos el video oficial,
+lo colocamos directamente aquí.
+</p>
+
+<a href="#musica" class="btn btn-gold">
+ESCUCHAR
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MÚSICA
+========================= -->
+
+<section id="musica">
+
+<div class="section-label">
+DISCOGRAFÍA
+</div>
+
+<h2 class="section-title">
+MÚSICA.
+</h2>
+
+
+<div class="music-list">
+
+
+<div class="track">
+
+<div class="track-number">
+01
+</div>
+
+<div class="track-info">
+
+<h3>
+NUEVO TRACK
+</h3>
+
+<p>
+FLOW EN LLAMAS
+</p>
+
+</div>
+
+<a href="#" class="track-button">
+▶
+</a>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+02
+</div>
+
+<div class="track-info">
+
+<h3>
+NUEVO TRACK
+</h3>
+
+<p>
+FLOW MONTANA
+</p>
+
+</div>
+
+<a href="#" class="track-button">
+▶
+</a>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+03
+</div>
+
+<div class="track-info">
+
+<h3>
+PRÓXIMAMENTE
+</h3>
+
+<p>
+NUEVO LANZAMIENTO
+</p>
+
+</div>
+
+<a href="#" class="track-button">
+▶
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ARTISTA
+========================= -->
+
+<section id="artista">
+
+<div class="artist">
+
+
+<div class="artist-photo">
+</div>
+
+
+<div class="artist-text">
+
+<div class="section-label">
+ENYELL
+</div>
+
+<h2 class="section-title">
+EL ARTISTA.
+</h2>
+
+<p>
+ENYELL construye una identidad musical
+que se mueve entre el sonido urbano,
+el reggaetón, la calle y las emociones.
+</p>
+
+<p>
+FLOW MONTANA representa su lado de
+actitud, presencia y energía.
+FLOW EN LLAMAS representa el romance,
+la sensualidad y las historias que dejan
+una sensación.
+</p>
+
+<div class="quote">
+
+NO ES SOLO<br>
+
+<span>UN FLOW.</span>
+
+<br>
+
+ES UNA<br>
+
+<span>IDENTIDAD.</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section id="videos">
+
+<div class="section-label">
+VISUAL
+</div>
+
+<h2 class="section-title">
+VIDEOS.
+</h2>
+
+<div class="video-grid">
+
+
+<div class="video-card">
+
+<a href="#" class="play">
+▶
+</a>
+
+</div>
+
+
+<div class="video-card">
+
+<a href="#" class="play">
+▶
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     REDES
+========================= -->
+
+<section class="social">
+
+<div class="section-label">
+ENYELL
+</div>
+
+<h2 class="section-title">
+SIGUE EL FLOW.
+</h2>
+
+<p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+Música nueva. Videos nuevos.
+Nuevo Flow.
+</p>
+
+
+<div class="social-links">
+
+<a href="#">
+YouTube
+</a>
+
+<a href="#">
+Instagram
+</a>
+
+<a href="#">
+TikTok
+</a>
+
+<a href="#">
+Spotify
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<strong>
+ENYELL
+</strong>
+
+<span>
+© 2026 ENYELL · FLOW MONTANA
+</span>
+
+</footer>
+
+
+</body>
+</html>
