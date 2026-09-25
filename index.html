@@ -38,22 +38,22 @@ h1{font-family:Anton,sans-serif;font-size:clamp(76px,13vw,170px);line-height:.82
 .eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);font-weight:900;margin-bottom:12px}
 .section-title{font-family:Anton,sans-serif;font-size:clamp(48px,7vw,86px);letter-spacing:1px;margin-bottom:42px}
 .flows{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.flow{min-height:310px;border:1px solid var(--line);padding:38px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:linear-gradient(135deg,#111,#070707)}
-.flow::before{content:"";position:absolute;inset:auto -20% -45% auto;width:280px;height:280px;border-radius:50%;background:rgba(216,173,76,.12);filter:blur(10px)}
-.flow h3{font-family:Anton;font-size:52px;letter-spacing:1px;position:relative}
-.flow p{color:#aaa;line-height:1.6;max-width:500px;margin-top:8px;position:relative}
-.music-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.track{background:#0d0d0d;border:1px solid var(--line);overflow:hidden;transition:.25s}
-.track:hover{transform:translateY(-5px);border-color:#4a3a19}
-.cover{aspect-ratio:1/1;position:relative;overflow:hidden;background:#151515}
+.flow{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden;background:transparent}
+.flow::before{content:"";position:absolute;right:-80px;top:-80px;width:180px;height:180px;border-radius:50%;background:rgba(216,173,76,.08);filter:blur(10px)}
+.flow h3{font-family:Anton;font-size:30px;letter-spacing:1px;position:relative;white-space:nowrap}
+.flow p{color:#aaa;line-height:1.45;max-width:300px;margin:0;position:relative;font-size:12px;text-align:right}
+.music-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+.track:hover{transform:translateY(-2px);border-color:#4a3a19}
+
 .cover img{width:100%;height:100%;object-fit:cover}
-.play{position:absolute;right:14px;bottom:14px;width:48px;height:48px;border-radius:50%;background:var(--gold);color:#080808;display:grid;place-items:center;font-weight:900;box-shadow:0 8px 25px #000}
-.track-body{padding:20px}
-.track h3{font-size:20px;margin-bottom:5px}
-.artists{color:#8e8e8e;font-size:12px;line-height:1.5;min-height:36px}
+.play{position:absolute;right:6px;bottom:6px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:#080808;display:grid;place-items:center;font-weight:900;font-size:11px;box-shadow:0 5px 12px #000}
+.track-body{padding:2px 2px 2px 0;min-width:0;flex:1}
+.track h3{font-size:17px;margin:0 0 3px}
+.artists{color:#8e8e8e;font-size:11px;line-height:1.3;margin-bottom:8px}
 .tag{display:inline-block;margin-top:14px;padding:6px 9px;border:1px solid #383838;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:1.3px}
-.platforms{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
-.platforms a{font-size:10px;font-weight:800;border:1px solid #333;padding:7px 9px;color:#ccc}
+
+
 .platforms a:hover{border-color:var(--gold);color:var(--gold)}
 .artist-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .artist-photo{border:1px solid var(--line);position:relative}
@@ -79,7 +79,9 @@ footer{border-top:1px solid var(--line);padding:35px 0;color:#666;font-size:11px
 @media(max-width:560px){
 .section{padding:80px 0}
 .flows{grid-template-columns:1fr}
-.music-grid{grid-template-columns:1fr}
+.music-list{gap:8px}.track{padding:7px;gap:9px}.cover{width:62px;height:62px;min-width:62px}.track h3{font-size:17px}.platforms{gap:3px}.platforms a{font-size:7px;padding:5px 5px}
+.flow{align-items:flex-start;flex-direction:column;gap:7px}
+.flow p{text-align:left;max-width:none}
 .social-grid{grid-template-columns:1fr}
 .hero-title{font-size:25px}
 h1{font-size:84px}
@@ -146,7 +148,40 @@ footer{flex-direction:column}
   <div class="container">
     <div class="eyebrow">DISCOGRAFÍA</div>
     <div class="section-title">MÚSICA.</div>
-    <div class="music-grid" id="musicGrid"></div>
+    <div class="music-list">
+      <article class="track">
+        <a class="cover" href="https://youtu.be/eA5NF0h4mzQ" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/eA5NF0h4mzQ/hqdefault.jpg" alt="Bumeran"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Bumeran</h3><div class="artists">ENYELL &amp; Diamond Black</div><div class="platforms"><a href="https://open.spotify.com/track/6Gzm2XLl4TPsv8cFf34gvk" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=xbCydyD-TC0" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Bumeran%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/eA5NF0h4mzQ" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/DAmH6qaqtmQ" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/DAmH6qaqtmQ/hqdefault.jpg" alt="El Hijo del Barrio"><span class="play">▶</span></a>
+        <div class="track-body"><h3>El Hijo del Barrio</h3><div class="artists">ENYELL &amp; Diamond Black</div><div class="platforms"><a href="https://open.spotify.com/track/0QJqJLzQ5up2zEItD27qNG" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=y2QRXX_BOrs" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=El%20Hijo%20del%20Barrio%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/DAmH6qaqtmQ" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/nvzl2G-SJyA" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/nvzl2G-SJyA/hqdefault.jpg" alt="Loba"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Loba</h3><div class="artists">ENYELL &amp; El Chino &amp; El Parra Bich</div><div class="platforms"><a href="https://open.spotify.com/track/0UEpHpcAv20z4ktqnP7u5W" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=CZ7GM2aE124" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Loba%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/nvzl2G-SJyA" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/VlknpcoEUlM" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/VlknpcoEUlM/hqdefault.jpg" alt="Poca Luz"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Poca Luz</h3><div class="artists">ENYELL &amp; El Parra Bich &amp; Banter Vilo</div><div class="platforms"><a href="https://open.spotify.com/track/2NyeMj3V7rSnMAvUVtrA2O" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=12f54rFlFMA" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Poca%20Luz%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/VlknpcoEUlM" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/ri7JW4l2VqI" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/ri7JW4l2VqI/hqdefault.jpg" alt="Tardes Grises"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Tardes Grises</h3><div class="artists">ENYELL &amp; Diamond Black</div><div class="platforms"><a href="https://open.spotify.com/track/5troYjDBP9P276qW4XsYrv" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=izbPjkExTvs" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Tardes%20Grises%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/ri7JW4l2VqI" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/Ozt7S6EJ9L0" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/Ozt7S6EJ9L0/hqdefault.jpg" alt="Diosa"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Diosa</h3><div class="artists">ENYELL &amp; Diamond Black &amp; El Parra Bich</div><div class="platforms"><a href="https://open.spotify.com/track/6ocJRNsHwNcEcbArhGFdZf" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=Ozt7S6EJ9L0" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Diosa%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/Ozt7S6EJ9L0" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/0rgU7NxR6JY" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/0rgU7NxR6JY/hqdefault.jpg" alt="Encendia"><span class="play">▶</span></a>
+        <div class="track-body"><h3>Encendia</h3><div class="artists">ENYELL &amp; Diamond Black &amp; Decko</div><div class="platforms"><a href="https://open.spotify.com/track/1chGnaWasfkPhlv2zshNIq" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=k5g8OajjrRE" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=Encendia%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/0rgU7NxR6JY" target="_blank">YOUTUBE</a></div></div>
+      </article>
+      <article class="track">
+        <a class="cover" href="https://youtu.be/cxsDO9Dls48" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/cxsDO9Dls48/hqdefault.jpg" alt="El Mundo Da Vuelta"><span class="play">▶</span></a>
+        <div class="track-body"><h3>El Mundo Da Vuelta</h3><div class="artists">ENYELL &amp; Diamond Black</div><div class="platforms"><a href="https://open.spotify.com/track/7CeZLtKcrPUiAUZJehKqXU" target="_blank">SPOTIFY</a><a href="https://music.youtube.com/watch?v=izbPjkExTvs" target="_blank">YOUTUBE MUSIC</a><a href="https://music.apple.com/us/search?term=El%20Mundo%20Da%20Vuelta%20Enyell" target="_blank">APPLE MUSIC</a><a href="https://youtu.be/cxsDO9Dls48" target="_blank">YOUTUBE</a></div></div>
+      </article>
+    </div>
     <div class="goldline"></div>
   </div>
 </section>
@@ -201,38 +236,7 @@ footer{flex-direction:column}
   </div>
 </footer>
 
-<script>
-const songs = [
-  {title:"Bumeran", artists:"ENYELL & Diamond Black", youtube:"https://youtu.be/eA5NF0h4mzQ", spotify:"https://open.spotify.com/track/6Gzm2XLl4TPsv8cFf34gvk", thumb:"https://img.youtube.com/vi/eA5NF0h4mzQ/maxresdefault.jpg"},
-  {title:"El Hijo del Barrio", artists:"ENYELL & Diamond Black", youtube:"https://youtu.be/DAmH6qaqtmQ", spotify:"https://open.spotify.com/track/0QJqJLzQ5up2zEItD27qNG", thumb:"https://img.youtube.com/vi/DAmH6qaqtmQ/maxresdefault.jpg"},
-  {title:"Loba", artists:"ENYELL & El Chino & El Parra Bich", youtube:"https://youtu.be/nvzl2G-SJyA", spotify:"https://open.spotify.com/track/0UEpHpcAv20z4ktqnP7u5W", thumb:"https://img.youtube.com/vi/nvzl2G-SJyA/maxresdefault.jpg"},
-  {title:"Poca Luz", artists:"ENYELL & El Parra Bich & Banter Vilo", youtube:"https://youtu.be/VlknpcoEUlM", spotify:"https://open.spotify.com/track/2NyeMj3V7rSnMAvUVtrA2O", thumb:"https://img.youtube.com/vi/VlknpcoEUlM/maxresdefault.jpg"},
-  {title:"Tardes Grises", artists:"ENYELL & Diamond Black", youtube:"https://youtu.be/ri7JW4l2VqI", spotify:"https://open.spotify.com/track/5troYjDBP9P276qW4XsYrv", thumb:"https://img.youtube.com/vi/ri7JW4l2VqI/maxresdefault.jpg"},
-  {title:"Diosa", artists:"ENYELL & Diamond Black & El Parra Bich", youtube:"https://youtu.be/Ozt7S6EJ9L0", spotify:"https://open.spotify.com/track/6ocJRNsHwNcEcbArhGFdZf", thumb:"https://img.youtube.com/vi/Ozt7S6EJ9L0/maxresdefault.jpg"},
-  {title:"Encendía", artists:"ENYELL & Diamond Black & Decko", youtube:"https://youtu.be/0rgU7NxR6JY", spotify:"https://open.spotify.com/track/1chGnaWasfkPhlv2zshNIq", thumb:"https://img.youtube.com/vi/0rgU7NxR6JY/maxresdefault.jpg"},
-  {title:"El Mundo Da Vuelta", artists:"ENYELL & Diamond Black", youtube:"https://youtu.be/cxsDO9Dls48", spotify:"https://open.spotify.com/track/7CeZLtKcrPUiAUZJehKqXU", thumb:"https://img.youtube.com/vi/cxsDO9Dls48/maxresdefault.jpg"}
-];
 
-const grid = document.getElementById("musicGrid");
-grid.innerHTML = songs.map((s, i) => `
-  <article class="track">
-    <a class="cover" href="${s.youtube}" target="_blank" rel="noopener" aria-label="Ver ${s.title} en YouTube">
-      <img src="${s.thumb}" alt="${s.title}" loading="lazy"
-           onerror="this.src='https://img.youtube.com/vi/' + s.youtube.split('/').pop() + '/hqdefault.jpg'">
-      <span class="play" aria-hidden="true">▶</span>
-    </a>
-    <div class="track-body">
-      <h3>${s.title}</h3>
-      <div class="artists">${s.artists}</div>
-      <span class="tag">ENYELL</span>
-      <div class="platforms">
-        <a href="${s.youtube}" target="_blank" rel="noopener">▶ YOUTUBE</a>
-        <a href="${s.spotify}" target="_blank" rel="noopener">♫ SPOTIFY</a>
-      </div>
-    </div>
-  </article>
-`).join("");
-</script>
 
 </body>
 </html>
